@@ -79,9 +79,19 @@ public class LocaleActivity extends BaseSetupWizardActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setNextText(R.string.next);
+        setBackText(R.string.emergency_call);
         mLanguagePicker = (LocalePicker) findViewById(R.id.locale_list);
         loadLanguages();
     }
+    
+    @Override
+    public void onBackPressed() {}
+
+    @Override
+    public void onNavigateBack() {
+        startEmergencyDialer();
+    }
+
 
     @Override
     public void onPause() {
@@ -112,12 +122,12 @@ public class LocaleActivity extends BaseSetupWizardActivity {
 
     @Override
     protected int getTitleResId() {
-        return R.string.setup_locale;
+        return R.string.setup_welcome;
     }
 
     @Override
     protected int getIconResId() {
-        return R.drawable.ic_locale;
+        return R.drawable.logo;
     }
 
     private void loadLanguages() {
