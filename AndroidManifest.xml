@@ -17,7 +17,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
-          package="org.lineageos.setupwizard"
+          package="org.blackbox.setupwizard"
           android:versionCode="5"
           android:sharedUserId="android.uid.system">
 
@@ -39,21 +39,21 @@
     <uses-permission android:name="android.permission.MANAGE_USERS" />
     <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-    <uses-permission android:name="lineageos.permission.HARDWARE_ABSTRACTION_ACCESS" />
+    <uses-permission android:name="blackbox.permission.HARDWARE_ABSTRACTION_ACCESS" />
     <uses-permission android:name="android.permission.BACKUP" />
-    <uses-permission android:name="lineageos.permission.FINISH_SETUP" />
-    <uses-permission android:name="lineageos.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="lineageos.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="blackbox.permission.FINISH_SETUP" />
+    <uses-permission android:name="blackbox.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="blackbox.permission.WRITE_SECURE_SETTINGS" />
 
     <permission
-        android:name="lineageos.permission.FINISH_SETUP"
+        android:name="blackbox.permission.FINISH_SETUP"
         android:protectionLevel="signatureOrSystem" />
 
-    <protected-broadcast android:name="org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE"
-                         android:permission="lineageos.permission.FINISH_SETUP"/>
+    <protected-broadcast android:name="org.blackbox.setupwizard.SETUP_COMPLETE"
+                         android:permission="blackbox.permission.FINISH_SETUP"/>
 
-    <protected-broadcast android:name="org.lineageos.setupwizard.SETUP_FINISHED"
-                         android:permission="lineageos.permission.FINISH_SETUP"/>
+    <protected-broadcast android:name="org.blackbox.setupwizard.SETUP_FINISHED"
+                         android:permission="blackbox.permission.FINISH_SETUP"/>
 
     <application android:label="@string/app_name"
                  android:icon="@mipmap/ic_launcher"
@@ -103,7 +103,7 @@
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_BLUETOOTH_SETUP" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_BLUETOOTH_SETUP" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -115,7 +115,7 @@
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_WELCOME" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_WELCOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -127,7 +127,7 @@
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_LOCALE" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_LOCALE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -139,7 +139,7 @@
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_DATETIME" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_DATETIME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -152,7 +152,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_WIFI_SETUP" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_WIFI_SETUP" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -165,7 +165,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_CAPTIVE_PORTAL_SETUP" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_CAPTIVE_PORTAL_SETUP" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -178,7 +178,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_SIM_MISSING" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_SIM_MISSING" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -191,7 +191,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_CHOOSE_DATA_SIM" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_CHOOSE_DATA_SIM" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -204,7 +204,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_ENABLE_MOBILE_DATA" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_ENABLE_MOBILE_DATA" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -217,19 +217,19 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_LOCATION_SETTINGS" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_LOCATION_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".LineageSettingsActivity"
+        <activity android:name=".BlackboxSettingsActivity"
                   android:label="@string/activity_label_empty"
                   android:excludeFromRecents="true"
                   android:configChanges="mcc|mnc"
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_SETTINGS" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -242,7 +242,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_BIOMETRIC_SETTINGS" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_BIOMETRIC_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -255,7 +255,7 @@
                   android:exported="false"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_LOCKSCREEN_SETTINGS" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_LOCKSCREEN_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -267,7 +267,7 @@
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_RESTORE_BACKUP"/>
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_RESTORE_BACKUP"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
@@ -279,7 +279,7 @@
                   android:immersive="true"
                   android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.LINEAGE_SETUP_COMPLETE" />
+                <action android:name="org.blackbox.setupwizard.BLACKBOX_SETUP_COMPLETE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -291,7 +291,7 @@
                   android:label="@@string/activity_label_empty"
                   android:theme="@style/NoDisplay">
             <intent-filter>
-                <action android:name="org.lineageos.setupwizard.EXIT"/>
+                <action android:name="org.blackbox.setupwizard.EXIT"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
