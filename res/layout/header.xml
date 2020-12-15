@@ -35,15 +35,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="64dp"
-        android:layout_toEndOf="@id/header_icon"
         android:paddingEnd="8dp"
-        android:typeface="monospace"
-        android:gravity="center_vertical"
-        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_centerInParent="true"
         android:maxLines="1"
         android:ellipsize="end"
         style="@style/WelcomeTitle" />
-        
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="@dimen/corner_radius"

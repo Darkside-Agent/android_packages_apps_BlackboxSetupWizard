@@ -45,7 +45,6 @@
             android:layout_toEndOf="@id/header_icon"
             android:layout_centerVertical="true"
             android:paddingEnd="8dp"
-            android:typeface="monospace"
             android:maxLines="1"
             android:ellipsize="end"
             style="@style/PageTitle" />
@@ -62,4 +61,3 @@
         android:src="@drawable/rounded_corners" />
 
 </RelativeLayout>
-
